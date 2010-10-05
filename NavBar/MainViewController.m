@@ -107,6 +107,7 @@ static NSArray *pageNames = nil;
 	
     // Create a final modal view controller
 	UIButton* modalViewButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [modalViewButton setAccessibilityLabel:@"info-button"];
 	[modalViewButton addTarget:self action:@selector(modalViewAction:) forControlEvents:UIControlEventTouchUpInside];
 	UIBarButtonItem *modalBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:modalViewButton];
 	self.navigationItem.rightBarButtonItem = modalBarButtonItem;
