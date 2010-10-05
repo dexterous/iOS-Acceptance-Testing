@@ -80,6 +80,8 @@
 	segmentedControl.frame = CGRectMake(0, 0, 400, kCustomButtonHeight);
 	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
 	
+    [segmentedControl setAccessibilityLabel:@"segmented-control"];
+    
 	defaultTintColor = [segmentedControl.tintColor retain];	// keep track of this for later
 
 	self.navigationItem.titleView = segmentedControl;
