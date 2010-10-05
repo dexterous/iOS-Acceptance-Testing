@@ -73,6 +73,10 @@ static NSArray *pageNames = nil;
 	[super dealloc];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
 - (void)viewDidLoad
 {
 	// Make the title of this page the same as the title of this app
