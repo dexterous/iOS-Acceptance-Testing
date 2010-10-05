@@ -2,6 +2,12 @@
 
 describe('NavBar app', function() {
 
+beforeEach(function() {
+  this.addMatchers({
+    toBeVisible: function() { return this.actual.isVisible() }
+  });
+});
+
 var target = UIATarget.localTarget()
 var app = target.frontMostApp()
 var window = app.mainWindow()
@@ -21,7 +27,7 @@ it('should select Text option', function() {
 
 it('should return to main menu', function() {
     window.navigationBar().leftButton().tap()
-    expect(window.navigationBar().staticTexts()['NavBar'].isVisible()).toBeTruthy()
+    expect(window.navigationBar().staticTexts()['NavBar']).toBeVisible()
 })
 
 })
