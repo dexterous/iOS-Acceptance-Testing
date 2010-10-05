@@ -7,7 +7,7 @@ var app = target.frontMostApp()
 var window = app.mainWindow()
 var table = window.tableViews()[0]
 
-it('should select View 4 option', function() {
+it('should display View 4 option', function() {
     table.cells()['View 4'].tap()
     expect(window.navigationBar().segmentedControls().length).toBe(1)
 })
