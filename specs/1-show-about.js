@@ -13,7 +13,7 @@ it('should display Info view', function() {
 
 it('should return to main menu', function() {
     window.buttons()[0].tap()
-    expect(window.navigationBar().staticTexts()['NavBar']).toBeTruthy()
+    expect(window.navigationBar().staticTexts()['NavBar'].isVisible()).toBeTruthy()
 })
 
 })

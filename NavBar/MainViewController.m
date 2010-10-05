@@ -189,6 +189,7 @@ static NSArray *pageNames = nil;
     NSDictionary *dataDictionary = [menuList objectAtIndex:indexPath.row];
     cell.textLabel.text = [dataDictionary valueForKey:kTitleKey];
     cell.detailTextLabel.text = [dataDictionary valueForKey:kDetailKey];
+    cell.accessibilityLabel = [dataDictionary valueForKey:kTitleKey];
 	
 	return cell;
 }
